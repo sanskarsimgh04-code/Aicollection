@@ -22,18 +22,23 @@ import { PolicyPage } from '@/pages/storefront/policy-pages';
 // Admin Pages
 import { AdminPageView } from '@/pages/admin/admin-pages';
 
+// Auth Guards
+import { ProtectedAccountRoute, ProtectedAdminRoute } from '@/components/auth/protected-route';
+
 // 404
 import { NotFoundPage } from '@/app/not-found';
 
 function RouterSwitch() {
   const pathname = usePathname();
 
-  // Admin Route Group
+  // Admin Route Group (Protected)
   if (pathname.startsWith('/admin')) {
     return (
-      <AdminLayout>
-        <AdminPageView />
-      </AdminLayout>
+      <ProtectedAdminRoute>
+        <AdminLayout>
+          <AdminPageView />
+        </AdminLayout>
+      </ProtectedAdminRoute>
     );
   }
 
@@ -57,7 +62,11 @@ function RouterSwitch() {
   } else if (pathname.startsWith('/order/')) {
     content = <OrderStatusPage />;
   } else if (pathname === '/account' || pathname.startsWith('/account/')) {
-    content = <AccountPage />;
+    content = (
+      <ProtectedAccountRoute>
+        <AccountPage />
+      </ProtectedAccountRoute>
+    );
   } else if (pathname === '/about') {
     content = <AboutPage />;
   } else if (pathname === '/contact') {
