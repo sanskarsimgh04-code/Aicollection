@@ -1,0 +1,6 @@
+{
+  "name": "A1 Collection - Premium Local Shop",
+  "description": "A1 Collection is a premium local-shop e-commerce destination featuring curated collections, handcrafted goods, and personalized manual order confirmation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

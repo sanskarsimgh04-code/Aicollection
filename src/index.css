@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: #FAFAF8;
+    --card: #FFFFFF;
+    --card-foreground: #171717;
+    --text-primary: #171717;
+    --text-secondary: #6B7280;
+    --border: #E5E7EB;
+    --primary-cta: #111111;
+    --primary-cta-hover: #262626;
+    --primary-cta-foreground: #FFFFFF;
+    --success: #15803D;
+    --error: #DC2626;
+
+    --radius-card: 14px;
+    --radius-button: 9px;
+    --radius-input: 9px;
+    --radius-image: 12px;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--text-primary);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+  }
+}
+
+/* Custom design token utility classes */
+.bg-app {
+  background-color: #FAFAF8;
+}
+
+.bg-card-surface {
+  background-color: #FFFFFF;
+}
+
+.text-main {
+  color: #171717;
+}
+
+.text-muted-custom {
+  color: #6B7280;
+}
+
+.border-subtle {
+  border-color: #E5E7EB;
+}
+
+.btn-primary-cta {
+  background-color: #111111;
+  color: #FFFFFF;
+  border-radius: 9px;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-primary-cta:hover {
+  background-color: #262626;
+}
+
+.rounded-card {
+  border-radius: 14px;
+}
+
+.rounded-button {
+  border-radius: 9px;
+}
+
+.rounded-input {
+  border-radius: 9px;
+}
+
+.rounded-img {
+  border-radius: 12px;
+}
+
